@@ -17,7 +17,7 @@ public class WebController {
     @RequestMapping("/save")
     public String process(){
         // save a single Customer
-        //repository.save(new Customer("Jack", "Smith"));
+        repository.save(new Customer("Jack", "Smith"));
 
         // save a list of Customers
 
