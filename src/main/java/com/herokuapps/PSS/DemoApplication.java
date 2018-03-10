@@ -1,17 +1,16 @@
-package com.example.webApp;
+package com.herokuapps.PSS;
 
+import com.herokuapps.PSS.repo.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 
-@Controller
 @SpringBootApplication
 public class DemoApplication {
-	@RequestMapping("/a")
-	@ResponseBody
+
+	@Autowired
+	CustomerRepository repository;
 	String home() {
 		return "Hello World!";
 	}
